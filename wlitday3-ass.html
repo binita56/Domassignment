@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLIT Assignment</title>
+    <style>
+         .myBtn{
+            background-color: rgb(0, 255, 64);
+            transition: all ease-in-out 0.2s;
+            cursor: pointer;
+        }
+        .myBtn:hover{
+            border: 1px solid #888;
+            background-color: #ddd;
+        }
+        </style>
+    
+</head>
+
+<body>
+    
+    <input id = "Name" placeholder="Enter your Name"><br>
+    <input id = "Address" placeholder="Enter ur Address"><br>
+    <input id = "College" placeholder="Enter your College"><br>
+    <input id = "Phone no" placeholder="Enter your Phone no"><br>
+    <input id = "Email" placeholder="Enter your Email Address"><br>
+    <button class = "myBtn"title="click me" onclick="showInfo()">Submit</button>
+         <script>
+        const showInfo =function(){
+                const name = document.getElementById('Name').value
+               const output = document.createElement('h1');
+                const College = document.getElementById("College").value  
+                const Address = document.getElementById("Address").value  
+                const Phone = document.getElementById("Phone no").value  
+                const Email = document.getElementById("Email").value  
+            output.innerHTML = `Name is ${name} ,College is ${College},Address is ${Address},Phone no is ${Phone},Email is ${Email}`;
+            document.body.append(output)            
+        }
+        </script>
+</body>
+</html>
